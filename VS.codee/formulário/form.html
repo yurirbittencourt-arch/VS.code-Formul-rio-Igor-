@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+     <meta charset="UTF-8">
+     <meta name= "viewport" content= "width= device-width, initial-scale=1.0">
+     <title>Formulário</title>
+     <style>
+    /* Muda a cor de fundo da página inteira e a fonte do texto */
+    body {
+        background-color: #E6F2FF;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Deixa os blocos (Dados pessoais, Gênero, Cursos) com fundo branco e borda arredondada */
+    fieldset {
+        background-color: #FFFFFF;
+        border: 1px solid #B0C4DE;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    /* Destaca os títulos de cada bloco */
+    legend {
+        font-weight: bold;
+        color: #1E3A8A;
+    }
+
+    /* Estiliza o botão de Enviar */
+    input[type="submit"] {
+        background-color: #1E3A8A;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+ </head>
+ <body>
+    <form>
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <label for="nome completo"> Nome completo: </label>
+            <input type="text" id="nome_completo" name="nome_completo" placeholder="Digite seu nome aqui">
+            
+            <label for="dt_nascimento">Data de nascimento</label>
+            <input type="date" id="dt_nascimento" name="dt_nascimento">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="uf">Unidade Federativa</label>
+            <select type="uf" id="uf">
+            <option value="" selected>Selection</option>
+            <option value="sp">SP</option>
+            </select>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha">
+        </fieldset>
+
+        <fieldset>
+            <legend>Gênero</legend>
+            <label for="Masculino">Masculino</label>
+            <input type="radio" id="Masculino" name="genero" value="M">
+
+            <label for="Feminino">Feminino</label>
+            <input type="radio" id="Feminino" name="genero" value="F">
+        </fieldset>
+        <fieldset>
+            <legend>Cursos</legend>
+            <label for="TI"> TI</label>
+            <input type="checkbox" id="ti" name="cursos" value="TI">
+
+            <label for="mecanica-a"> Mecânica aeronáutica</label>
+            <input type="checkbox" id="mecanica-a", name="cursos" value="mecanica-a">
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+ </body>
+</html>
